@@ -1,0 +1,23 @@
+[package]
+name = "eth-crypto-light"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hex = {version = "0.4.3", default-features = false, features = ["alloc"]}
+hmac = "0.12.1"
+k256 = {version = "0.13.3", default-features = false, features = ["alloc", "ecdsa"]}
+lazy_static = {version = "1.4.0", default-features = false, features = ["spin_no_std"]}
+mnemonic-external = {version = "0.1.0", default-features = false}
+pbkdf2 = {version = "0.12.2", default-features = false}
+regex = {version = "1.10.3", default-features = false}
+sha2 = {version = "0.10.8", default-features = false}
+tiny-keccak = {version = "2.0.2", features = ["keccak"]}
+zeroize = {version = "1.7.0", features = ["derive"]}
+
+[dev-dependencies]
+mnemonic-external = "0.1.0"
+
+[features]
+default = ["std"]
+std = []
